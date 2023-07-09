@@ -4,100 +4,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" type="x-icon" href="icon.ico">
+    <title>YouTube</title>
     <style>
-        html,
-        body {
+        *{margin: 0;
+        padding: 0;
+        }
+
+        body,
+        html {
             height: 100%;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
+        body {
+            background-color: black;
         }
 
-        .container{
+        .container {
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
+            align-items: center;
+            background-color: black;
+            height: 12%;
+            z-index: 2;
+
         }
 
-        .box {
-            height: 100px;
-            width: 100px;
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            background-image: url(images.png);
+            min-width: 220px;
+            min-height: 90px;
             background-size: cover;
             background-position: center;
+            margin-left: 10px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+
+        .ziko {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-top: 16px;
+            margin-left: 11px;
+            padding-left: 5px;
+            padding-top: 2px;
+        }
+
+        .ziko:hover {
+            background-color: rgba(116, 116, 116, 0.493);
+            border-radius: 70px;
+            background-size: cover;
+            background-position: center;
+            transition: 0.5s;
 
 
         }
 
-        .one {
-            height: 70px;
+
+        .ziko i {
             width: 100px;
-            background-image: url(youtube.jpg);
-            justify-content: start;
+            height: 1000px;
+            color: white;
+
+        }
+
+
+        .bmw {
+            height: 30px;
+            width: 80%;
+            max-width: 700px;
+            background: rgb(15, 15, 15);
+            display: flex;
             align-items: center;
+            border-radius: 50px;
+            padding: 10px 0px;
+            margin-left: 250px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border: 1px solid rgb(56, 56, 56);
+
         }
 
-        .two {
+
+        .bmw input {
+            background: transparent;
+            flex: 1;
+            border: 0;
+            outline: none;
+            padding: 24px 20px;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+
+        }
+
+        ::placeholder {
+            color: #c4c4c4;
+
+        }
+
+        .bmw button img {
+            width: 25px;
+        }
+
+        .bmw button {
+            border: 1px solid rgb(56, 56, 56);
+            border-radius: 0px 25px 25px 0px;
+            width: 90px;
+            height: 50px;
+            background: rgb(36, 36, 36);
+            cursor: pointer;
+
+        }
+
+
+
+
+        .mic {
+            background-image: url(mic.png);
+            width: 20px;
+            height: 30px;
+            background-size: cover;
+            background-position: center;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .mic:hover {
+            background-color: rgba(150, 150, 150, 0.493);
+            border-radius: 100px;
+            transition: 0.3s;
+        }
+
+
+        .login {
+            width: 100px;
+            height: 50px;
+            border: 1px solid rgb(56, 56, 56);
+            margin-left: 500px;
+            border-radius: 20px 20px 20px 20px;
+
+        }
+
+
+        .login i {
+            color: rgb(0, 119, 255);
+            padding-top: 15px;
+            padding-left: 10px;
+
+        }
+
+
+        .vids {
             display: flex;
-            justify-content: right;
-            align-items:center;
-            width: 70px;
-            height: 70px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            height: 700px;
+            width: 600px;
+            margin-left: 100px;
 
         }
 
-        .three {
-            display: flex;
-            justify-content: right;
-            width: 70px;
-            height: 70px;
-            background-color: rebeccapurple;
-            border-radius: 48px;
-            position: relative;
+        .vid1 {
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 10px;
+            background-image: url(audi.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            width: 400px;
 
         }
 
-        .three::before{
-            content: 'Z'; 
+        .vid2 {
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 10px;
+            background-image: url(bmw.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            width: 400px;
+
+        }
+
+        .vid3 {
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 10px;
+            background-image: url(mersedes.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            width: 400px;
+
+        }
+
+        .vid4 {
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 10px;
+            background-image: url(hyundai.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            width: 400px;
+
+        }
+
+        .vid5 {
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 10px;
+            background-image: url(pickup.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            width: 400px;
+
+        }
+
+        .vid6 {
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 10px;
+            background-image: url(wolks.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            width: 400px;
+
+        }
+
+        .vid7 {
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-left: 10px;
+            background-image: url(prius.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            width: 400px;
+
+        }
+
+
+
+
+        h2 {
+            color: white;
+            height: 100px;
+            width: 410px;
+            margin-left: 10px;
+            margin-top: 5px;
             text-align: center;
-            color: black;
-            line-height: 30px;
-            background-color: white;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            border-radius: 48px;
-            transition: .4s;
-            scale: 0;  
-            justify-content: center;         
         }
-        .three:hover::before{
-            scale: 1;
-            opacity: 40%;
+
+        a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+
+        .video:hover {
+            scale: 1.03;
+            transition: 0.3s;
+
+
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="box one"></div>
-        <div class="box two">
-            <form action="">
-                <input type="text" name="" id="" placeholder="search">
-            </form>
-        </div>
-        <div class="box three"></div>
+        <div class="ziko"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <a href="https://www.youtube.com/">
+            <div class="logo"></div>
+        </a>
+        <form action="https://www.youtube.com/search" method="get" class="bmw">
+            <input type="text" placeholder="Search">
+            <button type="submit"><img src="search-icon.png" alt=""></button>
+        </form>
+        <div class="mic"></div>
+        <a
+            href="https://accounts.google.com/v3/signin/identifier?dsh=S838865216%3A1688708432297448&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dtr%26next%3D%252F&ec=65620&hl=tr&ifkv=AeDOFXgIcKHFGgISR1_X-f3iJ-TGo5TxD-5oB-waDlU8QxEgby22q_BdC1sIuYb_-aTuqf97u94b8w&passive=true&service=youtube&uilel=3&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+            <div class="login"><i class="fa fa-user" aria-hidden="true"> Login</i>
+            </div>
+        </a>
+
     </div>
-    <video src="Neftçi - Qarabağ Azərbaycan DERBİSİ.mp4" width="200px" controls loop></video >
-    <video src="Neftçi - Qarabağ Azərbaycan DERBİSİ.mp4" width="200px" controls loop></video >
-    <video src="Neftçi - Qarabağ Azərbaycan DERBİSİ.mp4" width="200px" controls loop></video >
-    <video src="Neftçi - Qarabağ Azərbaycan DERBİSİ.mp4" width="200px" controls loop></video >
-    <video src="Neftçi - Qarabağ Azərbaycan DERBİSİ.mp4" width="200px" controls loop></video >
-    <video src="Neftçi - Qarabağ Azərbaycan DERBİSİ.mp4" width="200px" controls loop></video >
-    <video src="Neftçi - Qarabağ Azərbaycan DERBİSİ.mp4" width="200px" controls loop></video >
+    <hr>
+    <div class="vids">
+        <a href="https://www.youtube.com/watch?v=YJotkO4yDfA">
+            <div class="video vid1"></div>
+            <h2>audi</h2>
+        </a>
+        <a href="https://www.youtube.com/watch?v=6qvKptGr2Eg">
+            <div class="video vid2"></div>
+            <h2>bmw
+            </h2>
+        </a>
+        <a href="https://www.youtube.com/watch?v=AkcPVMe6ZWA">
+            <div class="video vid3"></div>
+            <h2>mersedes</h2>
+        </a>
+        <a href="https://www.youtube.com/watch?v=CZcES0F0N4M">
+            <div class="video vid4"></div>
+            <h2>hyundai
+            </h2>
+        </a>
+        <a href="https://www.youtube.com/watch?v=jVo6PcBzBvA&t=2s">
+            <div class="video vid5"></div>
+            <h2>pickup
+            </h2>
+        </a>
+        <a href="https://www.youtube.com/watch?v=XY5we3rmEwI">
+            <div class="video vid6"></div>
+            <h2>Wolksvagen</h2>
+        </a>
+        <a href="https://www.youtube.com/watch?v=fIJloJQVzLQ">
+            <div class="video vid7"></div>
+            <h2>prius
+            </h2>
+
 </body>
 
-</html>
+</html
